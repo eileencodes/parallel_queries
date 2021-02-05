@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<%= render @succulent %>
+
+<div>
+  <%= link_to "Edit this succulent", edit_succulent_path(@succulent) %> |
+  <%= link_to "Back to succulents", succulents_path %>
+
+  <%= button_to "Destroy this succulent", succulent_path(@succulent), method: :delete %>
+</div>

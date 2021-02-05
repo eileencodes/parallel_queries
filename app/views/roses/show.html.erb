@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<%= render @rose %>
+
+<div>
+  <%= link_to "Edit this rose", edit_rose_path(@rose) %> |
+  <%= link_to "Back to roses", roses_path %>
+
+  <%= button_to "Destroy this rose", rose_path(@rose), method: :delete %>
+</div>

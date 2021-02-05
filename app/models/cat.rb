@@ -1,0 +1,2 @@
+class Cat < AnimalsRecord
+end

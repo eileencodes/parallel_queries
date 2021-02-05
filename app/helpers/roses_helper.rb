@@ -1,0 +1,2 @@
+module RosesHelper
+end

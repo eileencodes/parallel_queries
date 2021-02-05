@@ -1,0 +1,2 @@
+class Rose < PlantsRecord
+end

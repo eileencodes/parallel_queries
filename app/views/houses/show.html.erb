@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<%= render @house %>
+
+<div>
+  <%= link_to "Edit this house", edit_house_path(@house) %> |
+  <%= link_to "Back to houses", houses_path %>
+
+  <%= button_to "Destroy this house", house_path(@house), method: :delete %>
+</div>
