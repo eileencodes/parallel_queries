@@ -2,7 +2,9 @@ require "test_helper"
 
 class DogsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @dog = dogs(:one)
+    100.times do |i|
+      Dog.create(name: "fido #{i}")
+    end
   end
 
   test "should get index" do

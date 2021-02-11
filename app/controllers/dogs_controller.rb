@@ -4,6 +4,14 @@ class DogsController < ApplicationController
   # GET /dogs or /dogs.json
   def index
     @dogs = Dog.all
+    (1..10).each do |i|
+      Dog.where(name: "fido #{i}").load_async.to_a
+    end
+
+    (1..10).each do |i|
+      Dog.connection.select_all("SELECT * FROM dogs where name = 'fido #{i}'", async: true)
+    end
+    render text: "done"
   end
 
   # GET /dogs/1 or /dogs/1.json
